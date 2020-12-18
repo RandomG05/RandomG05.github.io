@@ -102,13 +102,6 @@
         color: rgba(27,161,153,1);
     }
 
-    #bg_top{
-        position: absolute;
-        overflow: visible;
-        top: -497px;
-        left: -338px;
-    }
-
     .layanan{
         display: block;
         position: relative;
@@ -140,6 +133,15 @@
         justify-content: center;
         position: relative;
         top: 100px;
+    }
+
+    #background{
+        display: block;
+        position: absolute;
+        top: -100px;
+        width: 170%;
+        margin-left: 50%;
+        transform: translateX(-50%);
     }
 
     .menu_layanan > a{
