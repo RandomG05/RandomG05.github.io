@@ -35,8 +35,8 @@
     #logo {
         position: absolute;
         left: 5.7%;
-        max-width: 244px;
-        max-height: 228px;
+        width: 12%;
+        height: auto;
     }
 
     #dog_top{
@@ -44,8 +44,7 @@
         float: right;
         top: 18%;
         right: 6.875%;
-        max-height: 100%;
-        max-width: 100%;
+        width: 31%;
     }
 
     .title{
