@@ -44,10 +44,17 @@
         right: 132px;
     }
 
-    span.title{
+    .title{
         position: absolute;
-        top: 366px;
-        left: 140px;
+        width: auto;
+        max-width: 40%;
+        height: auto;
+        top: 35%;
+        left: 7%;
+    }
+
+    span#title{
+        position: relative;
         font-family: Museo Sans Rounded 700;
         font-style: normal;
         font-weight: normal;
@@ -55,10 +62,8 @@
         color: white;
     }
 
-    span.subtitle {
-        position: absolute;
-        top: 509px;
-        left: 140px;
+    span#subtitle {
+        position: relative;
         font-family: Open Sans;
         font-style: normal;
         font-weight: normal;
@@ -68,13 +73,11 @@
 
     .main_bt {
         text-decoration: none;
-        position: absolute;
+        position: relative;
+        top: 60px;
+        left: 0px;
         float: left;
-        top: 629px;
-        left: 140px;
-        padding: 10px 45px 0px;
-        width: 240px;
-        height: 75px;
+        padding: 10px 45px 10px;
         border-radius: 50px;
         background-color: rgba(255,220,37,1);
         box-shadow: 4px 4px #707070;
@@ -82,8 +85,8 @@
     }
 
     .main_bt:hover{
-        top: 633px;
-        left: 144px;
+        top: 62px;
+        left: 2px;
         cursor: pointer;
         box-shadow: none;
     }
