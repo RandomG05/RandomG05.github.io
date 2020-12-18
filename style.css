@@ -34,14 +34,18 @@
 
     #logo {
         position: absolute;
-        left: 110px;
+        left: 5.7%;
+        max-width: 244px;
+        max-height: 228px;
     }
 
     #dog_top{
         position: relative;
         float: right;
-        top: 200px;
-        right: 132px;
+        top: 18%;
+        right: 6.875%;
+        max-height: 100%;
+        max-width: 100%;
     }
 
     .title{
