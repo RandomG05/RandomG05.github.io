@@ -193,12 +193,13 @@
     }
 
     #artikel{
+        position: relative;
         text-align: left;
         width: 395px;
         max-width: 632px;
         height: 350px;
         padding: 0px 0px 0px;
-        background-color: #707070;
+        background-color: #9A9C9E;
         border-radius: 30px;
         overflow: hidden;
     }
@@ -217,7 +218,7 @@
     }
 
     #artikel > h2{
-        padding: 30px 10px 10px;
+        padding: 20px 10px 10px;
         font-family: Comfortaa;
         font-style: normal;
         font-weight: bold;
@@ -226,12 +227,38 @@
     }
 
     #artikel > span{
-        display: inline-block;
+        display: block;
         margin: 10px 10px 10px;
         font-family: Open Sans;
         font-style: normal;
         font-weight: normal;
         font-size: 20px;
         color: #FFFFFF;
+    }
+
+    #readmore{
+        display: block;
+        position: absolute;
+        float: right;
+        right: 20px;
+        bottom: 20px;
+        color: white;
+        padding: 10px 20px 10px;
+        border-radius: 50px;
+        background-color: rgba(255,220,37,1);
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        color: rgba(254,104,69,1);
+        box-shadow: 2px 2px #707070;
+        transition-duration: .2s;
+    }
+
+    #readmore:hover{
+        cursor: pointer;
+        box-shadow: none;
+        right: 18px;
+        bottom: 18px;
     }
 </style>
