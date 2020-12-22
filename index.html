@@ -1,17 +1,63 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>TEST</title>
+    <script>
+        $(document).ready(function () {
+            $('#button_next').click(function () {
+                $('#current').animate({
+                    width: '27vw',
+                    height: '17vw',
+                    left: '-21vw'
+                }, 500, function (e) {
+                    $('#current').removeAttr('style');
+                    $('#prev').attr("id", "hidden");
+                    $('#current').attr("id", "prev");
+                });
+                $('#next').animate({
+                    width: '36vw',
+                    height: '21.25vw',
+                    right: '31.5vw'
+                }, 500, function (e) {
+                    $('#next').removeAttr('style');
+                    $('#next').attr("id", "current");
+                    $('#hidden').attr("id", "next");
+                });
+            });
+            $('#button_prev').click(function () {
+                $('#current').animate({
+                    width: '27vw',
+                    height: '17vw',
+                    left: '21vw'
+                }, 500, function (e) {
+                    $('#next').attr("id", "hidden");
+                    $('#current').removeAttr('style');
+                    $('#current').attr("id", "next");
+                });
+                $('#prev').animate({
+                    width: '36vw',
+                    height: '21.25vw',
+                    left: '31.5vw'
+                }, 500, function (e) {
+                    $('#prev').removeAttr('style');
+                    $('#prev').attr("id", "current");
+                    $('#hidden').attr("id", "prev");
+                });
+            });
+            if ($('#curent').width == '61.5vw') { $('#curent').css("z-index", "-1"); }
+        });
+    </script>
 </head>
 <body>
     <div class="top_content">
-        <img id="background" src="assets/bg_top.png" / style="top: 0px;">
-        <img id="logo" src="assets/header_logo.png" srcset="assets/header_logo.png 1x, assets/header_logo@2x.png 2x">
-        <img id="dog_top" src="assets/header_anjing.png" srcset="assets/header_anjing.png 1x, assets/header_anjing@2x.png 2x">
+        <img id="background" src="assets/bg_top.png" style="top: 0px;">
+        <img id="logo" src="assets/header_logo.png" />
+        <img id="dog_top" src="assets/header_anjing.png" />
         <div class="title">
             <span id="title">Alo Pet</span> </br>
             <span id="subtitle">When vet, groomers and pet lovers meet!</span></br>
@@ -21,7 +67,7 @@
         </div>
     </div>
     <div class="layanan">
-        <img id="background" src="assets/bg_main.png" />
+        <img id="background" src="assets/bg_main.png" style="top: -10vw;"/>
         <div id="desc">
             <h3>Layanan Kami</h3>
         </div>
@@ -86,5 +132,80 @@
                 <a id="readmore">Selengkapnya</a>
             </div>
         </div>
+        <img id="background" src="assets/bg_circle.png" / style="left: -18vw; top: 80%; width: 30%">
+    </div>
+    <div class="testimoni">
+        <div id="desc">Testimoni</div>
+        <div id="subdesc">Dapatkan testimoni baru seputar layanan Alo Pet disini!</div>
+        <div class="carousel">
+            <div class="button_leftright">
+                <img class="button" id="button_prev" src="assets/prev.png" style="left:0px;box-shadow:2px 2px #707070;" />
+                <img class="button" id="button_next" src="assets/next.png" style="right:0px;box-shadow:-2px 2px #707070;" />
+            </div>
+            <div id="current">
+                <img id="background" />
+                <div class="content">
+                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
+                    2 " I like that I got to meet the dog Walker who is walking
+                    my dog daily and consult with her. I also appreciate the
+                    daily communication I get about the dog
+                    and how my dog is doing" 2
+                </div>
+            </div>
+            <div id="prev">
+                <div class="content">
+                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
+                    1 " I like that I got to meet the dog Walker who is walking
+                    my dog daily and consult with her. I also appreciate the
+                    daily communication I get about the dog
+                    and how my dog is doing" 1
+                </div>
+            </div>
+            <div id="next">
+                <div class="content">
+                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
+                    3 " I like that I got to meet the dog Walker who is walking
+                    my dog daily and consult with her. I also appreciate the
+                    daily communication I get about the dog
+                    and how my dog is doing" 3
+                </div>
+            </div>
+            <div id="next" class="hidden">
+                <div class="content">
+                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
+                    4 " I like that I got to meet the dog Walker who is walking
+                    my dog daily and consult with her. I also appreciate the
+                    daily communication I get about the dog
+                    and how my dog is doing" 4
+                </div>
+            </div>
+            <div id="prev" class="hidden">
+                <div class="content">
+                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
+                    5 " I like that I got to meet the dog Walker who is walking
+                    my dog daily and consult with her. I also appreciate the
+                    daily communication I get about the dog
+                    and how my dog is doing" 5
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="about_us">
+            <h1>Tentang Kami</h1>
+            <ol>
+                <li>Lokasi</li>
+                <li>Menjadi Mitra UKM Pet Shop & Grooming</li>
+                <li>Corporate Partnership</li>
+                <li>FAQ</li>
+                <li>Karir</li>
+                <li>Syarat & Ketentuan</li>
+                <li>Promo</li>
+                <li>Media</li>
+                <li>Blog</li>
+                <li>Franchise dan Vet Login</li>
+            </ol>
+        </div>
+        <div id="contact"></div>
     </div>
 </body>
