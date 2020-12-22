@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -10,46 +10,65 @@
     <script>
         $(document).ready(function () {
             $('#button_next').click(function () {
+                var $next = $('#next');
+                var $next_hidden = $('#next_hidden');
                 $('#current').animate({
+                    top: '2vw',
                     width: '27vw',
                     height: '17vw',
                     left: '-21vw'
                 }, 500, function (e) {
-                    $('#current').removeAttr('style');
-                    $('#prev').attr("id", "hidden");
-                    $('#current').attr("id", "prev");
+                    $('#prev_hidden').attr("id", "next_hidden");
+                    $('#prev').attr("id", "prev_hidden");
+                    $(this).removeAttr('style');
+                    $(this).attr("id", "prev");
                 });
-                $('#next').animate({
+                $next.animate({
+                    top: '-0vw',
                     width: '36vw',
                     height: '21.25vw',
                     right: '31.5vw'
                 }, 500, function (e) {
-                    $('#next').removeAttr('style');
-                    $('#next').attr("id", "current");
-                    $('#hidden').attr("id", "next");
+                    $next.removeAttr('style');
+                    $next.attr("id", "current");
+                    $next_hidden.attr("id", "next");
                 });
             });
             $('#button_prev').click(function () {
+                var $prev = $('#prev');
+                var $prev_hidden = $('#prev_hidden');
                 $('#current').animate({
+                    top: '2vw',
                     width: '27vw',
                     height: '17vw',
                     left: '21vw'
                 }, 500, function (e) {
-                    $('#next').attr("id", "hidden");
-                    $('#current').removeAttr('style');
-                    $('#current').attr("id", "next");
+                    $('#next_hidden').attr("id", "prev_hidden");
+                    $('#next').attr("id", "next_hidden");
+                    $(this).removeAttr('style');
+                    $(this).attr("id", "next");
                 });
-                $('#prev').animate({
+                $prev.animate({
+                    top: '-0vw',
                     width: '36vw',
                     height: '21.25vw',
                     left: '31.5vw'
                 }, 500, function (e) {
-                    $('#prev').removeAttr('style');
-                    $('#prev').attr("id", "current");
-                    $('#hidden').attr("id", "prev");
+                    $prev.removeAttr('style');
+                    $prev.attr("id", "current");
+                    $prev_hidden.attr("id", "prev");
                 });
             });
-            if ($('#curent').width == '61.5vw') { $('#curent').css("z-index", "-1"); }
+            $('#button_next').click(function () {
+                if ($(':animated').length) {
+                    return false;
+                }
+            });
+            $('#button_prev').click(function () {
+                if ($(':animated').length) {
+                    return false;
+                }
+            });
         });
     </script>
 </head>
@@ -143,7 +162,6 @@
                 <img class="button" id="button_next" src="assets/next.png" style="right:0px;box-shadow:-2px 2px #707070;" />
             </div>
             <div id="current">
-                <img id="background" />
                 <div class="content">
                     <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
                     2 " I like that I got to meet the dog Walker who is walking
@@ -170,7 +188,7 @@
                     and how my dog is doing" 3
                 </div>
             </div>
-            <div id="next" class="hidden">
+            <div id="next_hidden">
                 <div class="content">
                     <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
                     4 " I like that I got to meet the dog Walker who is walking
@@ -179,7 +197,7 @@
                     and how my dog is doing" 4
                 </div>
             </div>
-            <div id="prev" class="hidden">
+            <div id="prev_hidden">
                 <div class="content">
                     <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
                     5 " I like that I got to meet the dog Walker who is walking
@@ -206,6 +224,10 @@
                 <li>Franchise dan Vet Login</li>
             </ol>
         </div>
-        <div id="contact"></div>
+        <div id="contact">
+            <img src="assets/facebook_logo.png"/>
+            <img src="assets/instagram_logo.png"/>
+            <img src="assets/twitter_logo.png"/>
+        </div>
     </div>
 </body>
