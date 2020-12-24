@@ -71,7 +71,9 @@
                     $('#prev').css("z-index", "1");
                 }, 250);
             });
-            $('#twitter-widget-0').attr("scrolling", "yes");
+            setTimeout(function () {
+                $('#twitter-widget-0').attr("scrolling", "yes");
+            }, 100);
         });
     </script>
 </head>
@@ -165,7 +167,7 @@
                 <img class="button" id="button_next" src="assets/next.png" style="right:0px;box-shadow:-2px 2px #707070;" />
             </div>
             <div id="current">
-                    <a class="twitter-timeline" data-width="691" href="https://twitter.com/alo_pet?ref_src=twsrc%5Etfw" scrolling="yes">Tweets by alo_pet</a>
+                    <a class="twitter-timeline" data-width="691" href="https://twitter.com/alo_pet?ref_src=twsrc%5Etfw" scrolling="yes" data-tweet-limit="3">Tweets by alo_pet</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div id="prev">

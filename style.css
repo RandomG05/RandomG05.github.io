@@ -344,6 +344,7 @@
         width: 36vw;
         height: 21vw !important;
         border-radius: 1.5vw;
+        overflow-y: hidden;
     }
 
     .twitter-timeline::-webkit-scrollbar {
