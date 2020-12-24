@@ -10,13 +10,16 @@
     <script>
         $(document).ready(function () {
             $('#button_next').click(function () {
+                if ($(':animated').length) {
+                    return false;
+                }
                 var $next = $('#next');
                 var $next_hidden = $('#next_hidden');
                 $('#current').animate({
                     top: '2vw',
                     width: '27vw',
                     height: '17vw',
-                    left: '-21vw'
+                    left: '-21vw',
                 }, 500, function (e) {
                     $('#prev_hidden').attr("id", "next_hidden");
                     $('#prev').attr("id", "prev_hidden");
@@ -26,15 +29,21 @@
                 $next.animate({
                     top: '-0vw',
                     width: '36vw',
-                    height: '21.25vw',
+                    height: '21vw',
                     right: '31.5vw'
                 }, 500, function (e) {
                     $next.removeAttr('style');
                     $next.attr("id", "current");
                     $next_hidden.attr("id", "next");
                 });
+                setTimeout(function () {
+                    $('#next').css("z-index", "1");
+                }, 250);
             });
             $('#button_prev').click(function () {
+                if ($(':animated').length) {
+                    return false;
+                }
                 var $prev = $('#prev');
                 var $prev_hidden = $('#prev_hidden');
                 $('#current').animate({
@@ -49,26 +58,20 @@
                     $(this).attr("id", "next");
                 });
                 $prev.animate({
-                    top: '-0vw',
+                    top: '0vw',
                     width: '36vw',
-                    height: '21.25vw',
+                    height: '21vw',
                     left: '31.5vw'
                 }, 500, function (e) {
                     $prev.removeAttr('style');
                     $prev.attr("id", "current");
                     $prev_hidden.attr("id", "prev");
                 });
+                setTimeout(function () {
+                    $('#prev').css("z-index", "1");
+                }, 250);
             });
-            $('#button_next').click(function () {
-                if ($(':animated').length) {
-                    return false;
-                }
-            });
-            $('#button_prev').click(function () {
-                if ($(':animated').length) {
-                    return false;
-                }
-            });
+            $('#twitter-widget-0').attr("scrolling", "yes");
         });
     </script>
 </head>
@@ -162,13 +165,8 @@
                 <img class="button" id="button_next" src="assets/next.png" style="right:0px;box-shadow:-2px 2px #707070;" />
             </div>
             <div id="current">
-                <div class="content">
-                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
-                    2 " I like that I got to meet the dog Walker who is walking
-                    my dog daily and consult with her. I also appreciate the
-                    daily communication I get about the dog
-                    and how my dog is doing" 2
-                </div>
+                    <a class="twitter-timeline" data-width="691" href="https://twitter.com/alo_pet?ref_src=twsrc%5Etfw" scrolling="yes">Tweets by alo_pet</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
             <div id="prev">
                 <div class="content">
@@ -225,9 +223,9 @@
             </ol>
         </div>
         <div id="contact">
-            <img src="assets/facebook_logo.png"/>
-            <img src="assets/instagram_logo.png"/>
-            <img src="assets/twitter_logo.png"/>
+            <img src="assets/facebook_logo.png" />
+            <img src="assets/instagram_logo.png" />
+            <img src="assets/twitter_logo.png" />
         </div>
     </div>
 </body>
