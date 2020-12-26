@@ -18,6 +18,11 @@
         border: none;
     }
 
+    ::-webkit-scrollbar {
+        width: 0px; /* Remove scrollbar space */
+        background: transparent; /* Optional: just make scrollbar invisible */
+    }
+
     body{
         position: absolute;
         background-color: #F9F9F9;
@@ -319,7 +324,7 @@
         height: 17vw;
         background: url(assets/faded.png) no-repeat center;
         background-size: cover;
-        border-radius: 30px;
+        border-radius: 1.5vw;
         z-index: -1;
         overflow: hidden;
     }
@@ -336,7 +341,7 @@
         font-family: Open Sans;
         font-style: normal;
         font-weight: normal;
-        font-size: 130%;
+        font-size: 1.2vw;
         color: rgba(248,248,248,1);
     }
 
@@ -344,7 +349,7 @@
         width: 36vw;
         height: 21vw !important;
         border-radius: 1.5vw;
-        overflow-y: hidden;
+        scrollbar-width: none;
     }
 
     .twitter-timeline::-webkit-scrollbar {
@@ -355,6 +360,7 @@
         position: absolute;
         top: 0px;
         bottom: 0px;
+        width: 3vw;
         margin: 10% 8vw;
         z-index: 2;
         border-radius: 100%;

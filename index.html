@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>TEST</title>
@@ -74,7 +74,7 @@
             });
             setTimeout(function () {
                 $('#twitter-widget-0').attr("scrolling", "yes");
-            }, 100);
+            }, 1000);
         });
     </script>
 </head>
@@ -92,7 +92,7 @@
         </div>
     </div>
     <div class="layanan">
-        <img id="background" src="assets/bg_main.png" style="top: -10vw;"/>
+        <img id="background" src="assets/bg_main.png" style="top: -10vw;" />
         <div id="desc">
             <h3>Layanan Kami</h3>
         </div>
@@ -167,17 +167,12 @@
                 <img class="button" id="button_prev" src="assets/prev.png" style="left:0px;box-shadow:2px 2px #707070;" />
                 <img class="button" id="button_next" src="assets/next.png" style="right:0px;box-shadow:-2px 2px #707070;" />
             </div>
-            <div id="current">
-                    <a class="twitter-timeline" data-width="691" href="https://twitter.com/alo_pet?ref_src=twsrc%5Etfw" scrolling="yes" data-tweet-limit="3">Tweets by alo_pet</a>
+            <div id="current" style="background-color: white; background-image: none;">
+                <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+                <div class="elfsight-app-c66a1833-6e54-45ec-9d67-99962b5c5ce6" style="border-radius: 1.5vw;"></div>
             </div>
             <div id="prev">
-                <div class="content">
-                    <img src="assets/profile.png" style="width:15%; margin:5% 5%;" /></br>
-                    1 " I like that I got to meet the dog Walker who is walking
-                    my dog daily and consult with her. I also appreciate the
-                    daily communication I get about the dog
-                    and how my dog is doing" 1
-                </div>
+                <a class="twitter-timeline" data-width="691" href="https://twitter.com/alo_pet?ref_src=twsrc%5Etfw" scrolling="yes" data-tweet-limit="3">Tweets by alo_pet</a>
             </div>
             <div id="next">
                 <div class="content">
