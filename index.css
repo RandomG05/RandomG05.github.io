@@ -16,6 +16,7 @@
         padding: 0;
         box-sizing: border-box;
         border: none;
+        text-decoration: none;
     }
 
     ::-webkit-scrollbar {
@@ -30,7 +31,7 @@
     }
 
     .top_content {
-        position: absolute;
+        position: relative;
         overflow: visible;
         width: 100%;
         height: 100%;
@@ -40,11 +41,11 @@
         position: absolute;
         left: 5.7%;
         width: 12%;
-        height: auto;
+        height: 100%;
     }
 
     #icon{
-        width: 30%;
+        width: 100%;
     }
 
     #dog_top{
@@ -159,17 +160,13 @@
         width: 15vw;
         height: 15vw;
         margin: .5vw 1.5vw auto;
-        padding: 4vw 1vw 0px;
         text-align: center;
         font-family: Comfortaa;
         font-style: normal;
         font-weight: normal;
         font-size: 1.3vw;
         color: rgba(112,112,112,1);
-        background-color: #ffffff;
-        border-radius: 1.5vw;
         transition-duration: 0.2s;
-        box-shadow: .2vw .2vw #707070;
     }
 
     .menu_layanan > a:hover{
@@ -373,54 +370,57 @@
         margin: 10.2% 8.4vw 0;
     }
 
-    .footer{
-        position: absolute;
-        top: 220vw;
-        width: 100%;
-        height: 20%;
-        background: url(assets/bg_bottom.png) no-repeat content-box;
-        background-size: cover;
-    }
 
-    #about_us{
-        position: relative;
-        left: 5vw;
-        top: 5vw;
-        width: 50%;
-    }
+.footer {
+    display: flex;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 350px;
+    padding: 120px 40px;
+    background: url(assets/bg_bottom.png) no-repeat;
+    background-size: 100%;
+}
 
-    #about_us > h1{
-        font-family: Comfortaa;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 1.5vw;
-        color: rgba(255,229,48,1);
-    }
+#about_us {
+    flex: 1;
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 50%;
+}
 
-    #about_us > ol{
-        height: inherit;
-        margin-top: 2vw;
-        list-style-type: none;
-        columns: 2;
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 1.2vw;
-        color: #FFFFFF;
-    }
+#about_us > h1 {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255,229,48,1);
+}
 
-    #contact{
-        display: block;
-        position: relative;
-        float: right;
-        right: 10vw;
-    }
+#about_us > ol {
+    height: inherit;
+    margin-top: 2vw;
+    list-style-type: none;
+    columns: 2;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
 
-    #contact > img{
-        padding: 0.3vw;
-        margin: 1vw 1vw 0;
-        background-color: #FFFFFF;
-        border-radius: 50px;
-    }
+#contact {
+    flex: 1;
+    position: relative;
+    text-align: end;
+}
+
+#contact > img {
+    padding: 0.3vw;
+    margin: 1vw 1vw 0;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+}
 
 </style>

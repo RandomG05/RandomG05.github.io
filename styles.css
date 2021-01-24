@@ -1,0 +1,184 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    z-index: 0;
+}
+
+.navbar{
+    white-space: nowrap;
+    height: 52px;
+}
+
+#topnav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(128,128,128,1);
+    color: rgba(255,229,48,1);
+    font-family: Segoe UI;
+    font-size: 24px;
+    z-index: 1;
+}
+
+#topnav .item:hover{
+    background-color: rgba(255,220,37,1);
+    color: rgba(128,128,128,1);
+    transition-duration: 0.2s;
+}
+
+.flex-center{
+    display: flex;
+    flex: auto;
+}
+
+.flex-side {
+    padding: 5px 10px 5px;
+    cursor: pointer;
+}
+
+.navbar a {
+    padding: 10px 30px 0px 30px ;
+    cursor: pointer;
+}
+
+.item{
+    display: block;
+    float: left;
+    width: auto;
+}
+
+.logo {
+    
+}
+
+#main-content {
+    display: flex;
+    position: relative;
+    padding: 0 100px;
+    margin-top: 15%;
+    color: #ffffff;
+}
+
+#artikel-body {
+    position: relative;
+    width: 70%;
+    padding: 50px 50px;
+    background-color: #17b5af;
+    border-radius: 50px;
+}
+
+#artikel-suggestion{
+    text-align: center;
+    justify-content: center;
+    margin-left: 50px;
+    width: 30%;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border-radius: 50px;
+}
+
+.title{
+    font-family: Segoe UI;
+    font-size: 30px;
+    color: yellow;
+}
+
+.content-item{
+    margin: 50px 0px;
+}
+
+#artikel-content {
+    font-family: Open Sans;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: column;
+    flex: 1 100%;
+    text-align: left;
+}
+
+.flex-row > li{
+    margin: 20px 0px;
+    min-height: 100px;
+    height: 200px;
+    background-color: #17b5af;
+    border-radius:1vw;
+}
+
+.flex-row > li > p{
+    float: right;
+    width: 60%;
+    height: 100%;
+    padding: 10px;
+}
+
+.preview{
+    position: relative;
+    float: left;
+    width:40%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #ffffff;
+    border-radius: 1vw;
+}
+
+.footer {
+    display: flex;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 350px;
+    padding: 120px 40px;
+    background: url(assets/bg_bottom.png) no-repeat;
+    background-size: 100%;
+}
+
+#about_us {
+    flex: 1;
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 50%;
+}
+
+#about_us > h1 {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgba(255,229,48,1);
+}
+
+#about_us > ol {
+    height: inherit;
+    margin-top: 2vw;
+    list-style-type: none;
+    columns: 2;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+#contact {
+    flex: 1;
+    position: relative;
+    text-align: end;
+}
+
+#contact > img {
+    padding: 0.3vw;
+    margin: 1vw 1vw 0;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+}
